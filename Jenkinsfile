@@ -9,6 +9,9 @@ pipeline {
         string(name: 'PERSON', defaultValue: 'Mr Greg', description: 'Who should I say hello to?')
         password(name: 'PASSWORD' , defaultValue: 'chut! c\'est secret')
     }
+    tools {
+        maven 'maven'
+    }
     stages {
         stage ('checkout') {
             environment {
@@ -42,7 +45,7 @@ pipeline {
         stage ('build') {
             steps {
                 echo 'building'
-                sh 'mvn -Dmaven.test.failure.ignore=true install' 
+                sh 'mvn -f pom.xml install' 
         }  
     }
 }
