@@ -39,12 +39,13 @@ pipeline {
  //               echo "Le password est: ${PASSWORD}"
             }
         }
-        stage ('Build') {
+        stage ('build') {
             steps {
                 echo 'building'
                 sh 'mvn -Dmaven.test.failure.ignore=true install' 
         }  
     }
+}
     post {
         success {
             echo "$Message"
@@ -53,5 +54,4 @@ pipeline {
             echo 'oh no! failure!'
         }
     }
-}
 }
