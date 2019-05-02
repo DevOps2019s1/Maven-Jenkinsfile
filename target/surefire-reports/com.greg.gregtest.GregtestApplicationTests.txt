@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.greg.gregtest.GregtestApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.229 s - in com.greg.gregtest.GregtestApplicationTests
