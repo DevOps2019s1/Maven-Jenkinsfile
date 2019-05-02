@@ -18,7 +18,7 @@ pipeline {
                 stage = "checkout"
             }
             steps {
-                git branch: 'develop', credentialsId: '5a468570-e6fa-4c92-b9ff-011ca7674005', url: 'https://github.com/GregLebreton/maven_pipeline.git'
+                git branch: 'develop', credentialsId: '5a468570-e6fa-4c92-b9ff-011ca7674005', url: 'https://github.com/GregLebreton/Maven_Jenkinsfile.git'
                 echo 'step: checkout'
             }
         }
