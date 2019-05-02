@@ -2,6 +2,10 @@
 // Jenkinsfile!
 pipeline {
     agent any
+        tools {
+        maven 'maven'
+        jdk 'java'
+    }
     environment {
         Message = "well done!"
     }
@@ -39,6 +43,10 @@ pipeline {
  //               echo "Le password est: ${PASSWORD}"
             }
         }
+        stage ('build') {
+            steps {
+                 sh 'mvn -Dmaven.test.failure.ignore=true install' 
+            }
         
     }
     post {
